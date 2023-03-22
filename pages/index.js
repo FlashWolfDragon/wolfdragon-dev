@@ -22,9 +22,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Banner />
-
       <div className="pt-[27rem] md:pt-[30rem]"></div>
       <div className="flex justify-center flex-row flex-wrap ml-8 mr-8 md:ml-32 md:mr-32 -translate-y-16 gap-5">
         <IconLink
