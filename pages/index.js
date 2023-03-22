@@ -3,6 +3,21 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Banner from "@/images/Full-Banner-Wolfdragon.svg";
+import IconLink from "@/components/IconLink";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faDragon,
+  faEnvelope,
+  faNewspaper,
+  faPalette,
+  faPallet,
+  faPaperPlane,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faTwitter,
+  faTelegram,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +34,53 @@ export default function Home() {
       <Image
         src={Banner}
         alt="Banner"
-        className="h-[372px] w-[3588px] max-w-[3588px]"
+        className="h-[455px] w-[2990px] max-w-[2990px]"
       />
-      <div className="banner"></div>
+      <h1 className="flex justify-center -translate-y-28 md:-translate-y-56 sm:text-6xl text-4xl md:text-8xl italic">
+        WolfDragon.dev
+      </h1>
+      <div className="flex justify-center flex-row flex-wrap ml-8 mr-8 md:ml-32 md:mr-32 -translate-y-16 gap-5">
+        <IconLink
+          link="https://twitter.com/FlashWolfDragon"
+          name="Twitter"
+          icon={faTwitter}
+        />
+        <IconLink
+          link="https://t.me/FlashWolfDragon"
+          name="Telegram"
+          icon={faTelegram}
+        />
+        <IconLink
+          link="https://github.com/FlashWolfDragon"
+          name="Github"
+          icon={faGithub}
+        />
+        <IconLink
+          link="https://blog.wolfdragon.dev/"
+          name="Blog"
+          icon={faNewspaper}
+        />
+        <IconLink
+          link="https://yip.wolfdragon.dev/"
+          name="Yip"
+          icon={faDragon}
+        />
+        <IconLink
+          link="https://trello.com/b/JVaMnD4y/flashs-commissions"
+          name="Art"
+          icon={faPalette}
+        />
+        <IconLink
+          link="https://t.me/addstickers/FlashKobold"
+          name="Kobold Stickers"
+          icon={faPaperPlane}
+        />
+        <IconLink
+          link="https://t.me/addstickers/FlashWolfDragon"
+          name="Dragon Stickers (nsfw)"
+          icon={faPaperPlane}
+        />
+      </div>
     </>
   );
 }
