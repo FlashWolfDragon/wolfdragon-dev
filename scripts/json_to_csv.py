@@ -3,7 +3,6 @@ import csv
 from collections import defaultdict
 
 result = defaultdict(str)
-# result[key] = "\n".join(value)
 
 with open('scripts/messages.json', 'r') as jsonfile:
     data = json.load(jsonfile)
