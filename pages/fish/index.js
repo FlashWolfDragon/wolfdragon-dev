@@ -81,12 +81,14 @@ export default function Fish() {
         </Head>
 
         <div className="flex flex-col -translate-y-[6rem] m-0 md:ml-[6rem] md:mr-[6rem]">
+          <h1 className="text-center text-3xl mb-3 font-bold">
+            Scoutr's Fish Facts
+          </h1>
           <DataTable
             columns={columns}
             data={data}
             pagination
             paginationComponentOptions={{ selectAllRowsItem: true }}
-            paginationDefaultPage={2}
           />
         </div>
       </>
