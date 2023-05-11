@@ -28,6 +28,11 @@ export default function FishFact() {
       </Head>
 
       <div className="flex flex-col text-left ml-[1rem] mr-[1rem] sm:ml-[6rem] sm:mr-[6rem] md:ml-[12rem] md:mr-[12rem] -translate-y-16 gap-5">
+        <div className="flex text-center text-3xl font-bold">
+          <Link href={"https://twitter.com/scoutr33"}>
+            Scoutr&#39;s Fish Facts
+          </Link>
+        </div>
         <h1 className="font-bold text-2xl">{router.query.date}</h1>
         <div className="flex">
           <Link
