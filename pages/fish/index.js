@@ -6,6 +6,7 @@ import DataTable from "react-data-table-component";
 import { useEffect, useLayoutEffect, useState } from "react";
 import IconLink from "@/components/IconLink";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import Banner from "@/components/Banner";
 
 const columns = [
   {
@@ -81,6 +82,7 @@ export default function Fish() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
+        <Banner character={"scoutr"} />
 
         <div className="flex flex-col -translate-y-[6rem] m-0 md:ml-[6rem] md:mr-[6rem]">
           <div className="flex text-center text-3xl mb-3 font-bold">

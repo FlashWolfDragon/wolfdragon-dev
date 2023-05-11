@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import FishFacts from "@/library/messages.json";
 import FishFactText from "@/components/FishFactText";
 import { useEffect, useLayoutEffect } from "react";
+import Banner from "@/components/Banner";
 
 export default function FishFact() {
   const router = useRouter();
@@ -26,6 +27,7 @@ export default function FishFact() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Banner character={"scoutr"} />
 
       <div className="flex flex-col text-left ml-[1rem] mr-[1rem] sm:ml-[6rem] sm:mr-[6rem] md:ml-[12rem] md:mr-[12rem] -translate-y-16 gap-5">
         <div className="flex text-center text-3xl font-bold">
