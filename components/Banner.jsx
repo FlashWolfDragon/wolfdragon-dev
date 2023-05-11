@@ -13,7 +13,8 @@ export default function Banner() {
         className="absolute w-[2990px] max-w-[2990px]"
       />
       <Link
-        href="http://localhost:3000"
+        href="/"
+        as="/"
         className="absolute w-[200px] h-[200px] translate-x-[75px] translate-y-[130px] z-10"
       ></Link>
       <Image

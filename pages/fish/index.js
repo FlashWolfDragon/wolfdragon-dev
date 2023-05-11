@@ -3,7 +3,7 @@ import Link from "next/link";
 import FishFacts from "@/library/messages.json";
 import FishFactText from "@/components/FishFactText";
 import DataTable from "react-data-table-component";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 const columns = [
   {
@@ -24,7 +24,7 @@ let data = Object.keys(FishFacts).map((date) => {
   return {
     date: date,
     fishfact: (
-      <Link href={`http://localhost:3000/fish/${date}`} className="mt-10">
+      <Link href={`/fish/${date}`} as={`/fish/${date}`} className="mt-10">
         <FishFactText>{truncateWords(FishFacts[date][0], 50)}</FishFactText>
       </Link>
     ),
@@ -46,6 +46,10 @@ export default function Fish() {
   useEffect(() => {
     setInitialRenderComplete(true);
   }, []);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   if (!initialRenderComplete) {
     return (

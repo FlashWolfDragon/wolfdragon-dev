@@ -48,7 +48,11 @@ export default function Home() {
           name="Art"
           icon={faPalette}
         />
-        <IconLink link="http://localhost:3000/fish" name="Fish" icon={faFish} />
+        <IconLink
+          link="http://192.168.1.217:3000/fish"
+          name="Scoutr's Fish Facts"
+          icon={faFish}
+        />
         <IconLink
           link="https://yip.wolfdragon.dev/"
           name="Yip"
