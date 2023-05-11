@@ -4,6 +4,8 @@ import FishFacts from "@/library/messages.json";
 import FishFactText from "@/components/FishFactText";
 import DataTable from "react-data-table-component";
 import { useEffect, useLayoutEffect, useState } from "react";
+import IconLink from "@/components/IconLink";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const columns = [
   {
@@ -81,15 +83,29 @@ export default function Fish() {
         </Head>
 
         <div className="flex flex-col -translate-y-[6rem] m-0 md:ml-[6rem] md:mr-[6rem]">
-          <h1 className="text-center text-3xl mb-3 font-bold">
-            Scoutr's Fish Facts
-          </h1>
+          <div className="flex text-center text-3xl mb-3 font-bold">
+            <Link href={"https://twitter.com/scoutr33"}>
+              Scoutr's Fish Facts
+            </Link>
+          </div>
           <DataTable
             columns={columns}
             data={data}
             pagination
             paginationComponentOptions={{ selectAllRowsItem: true }}
           />
+          <div className="flex mt-5 ml-5 flex-col md:flex-row">
+            <IconLink
+              link="https://twitter.com/scoutr33"
+              name="Scoutr's Twitter"
+              icon={faTwitter}
+              className={"w-1 h-1"}
+            />
+            <p className="p-3 max-w-[40rem]">
+              ABOUT: <br/>
+              This page is a collection of daily fish facts made by Scoutr33 from 2021 to 2022 that was originally hosted on a discord server. This page serves as an archive of all the fish facts that have been made on that server. There are some content warnings throughout the fish facts, and the content has been blurred out. This content can be revealed on click. This page has been made with permission from Scoutr.
+            </p>
+          </div>
         </div>
       </>
     );
