@@ -12,6 +12,7 @@ import {
   faTwitter,
   faTelegram,
   faGithub,
+  faMastodon,
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
@@ -30,6 +31,11 @@ export default function Home() {
           link="https://twitter.com/FlashWolfDragon"
           name="Twitter"
           icon={faTwitter}
+        />
+        <IconLink
+          link="https://meow.social/@Flash"
+          name="Mastodon"
+          icon={faMastodon}
         />
         <IconLink
           link="https://t.me/FlashWolfDragon"
