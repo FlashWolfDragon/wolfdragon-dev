@@ -35,6 +35,7 @@ export default function Home() {
         <IconLink
           link="https://meow.social/@Flash"
           name="Mastodon"
+          rel="me"
           icon={faMastodon}
         />
         <IconLink
